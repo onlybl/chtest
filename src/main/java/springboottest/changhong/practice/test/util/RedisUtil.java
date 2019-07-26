@@ -79,25 +79,12 @@ public final class RedisUtil {
      */
     public <T> T get(String key,Class<T> clazz){
         try {
-//            System.out.println(redisTemplate.opsForValue().get(key).getClass().getName().toString());
             return (T)redisTemplate.opsForValue().get(key);
         }catch (Exception e){
             return null ;
         }
     }
 
-    /**
-     * 非对象类型获取
-     * @param key
-     * @return
-     */
-//    public String get(String key){
-//        try {
-//            return redisTemplate.opsForValue().get(key).toString();
-//        }catch (Exception e){
-//            return null ;
-//        }
-//    }
     /**
      * 普通缓存放入
      * @param key
